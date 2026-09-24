@@ -59,6 +59,10 @@ class UserController extends Controller
     {
         return view("admin");
     }
+    public function viewcreate()
+    {
+        return view("create");
+    }
     public function vieworder()
     {
         return view("order");

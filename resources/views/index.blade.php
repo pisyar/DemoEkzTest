@@ -13,6 +13,7 @@
         @auth
         @if(Auth::user()->role == 'admin')
         <button><a style="text-decoration: none; color:black" href="{{ route('viewadminpanel') }}">Панель админа</a></button>
+        <button><a style="text-decoration: none; color:black" href="{{ route('viewcreate') }}">Создать</a></button>
         @else
         <button><a style="text-decoration: none; color:black" href="{{ route('viewprofile') }}">Профиль</a></button>
         <button><a style="text-decoration: none; color:black" href="{{ route('vieworder') }}">Заказать</a></button>

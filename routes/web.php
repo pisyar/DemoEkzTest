@@ -14,4 +14,5 @@ Route::get('/viewlog', [UserController::class, "viewlog"])->name('viewlog');
 Route::get('/homepage', [UserController::class, "homepage"])->name('homepage');
 Route::get('/viewprofile', [UserController::class, "viewprofile"])->name('viewprofile');
 Route::get('/viewadminpanel', [UserController::class, "viewadminpanel"])->name('viewadminpanel');
+Route::get('/viewcreate', [UserController::class, "viewcreate"])->name('viewcreate');
 Route::get('/vieworder', [UserController::class, "vieworder"])->name('vieworder');
