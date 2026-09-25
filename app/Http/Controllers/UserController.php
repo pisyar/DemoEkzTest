@@ -63,8 +63,5 @@ class UserController extends Controller
     {
         return view("create");
     }
-    public function vieworder()
-    {
-        return view("order");
-    }
+
 }

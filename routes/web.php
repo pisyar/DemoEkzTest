@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\OrderController;
 use App\Http\Controllers\UserController;
 use Illuminate\Support\Facades\Route;
 
@@ -15,4 +16,6 @@ Route::get('/homepage', [UserController::class, "homepage"])->name('homepage');
 Route::get('/viewprofile', [UserController::class, "viewprofile"])->name('viewprofile');
 Route::get('/viewadminpanel', [UserController::class, "viewadminpanel"])->name('viewadminpanel');
 Route::get('/viewcreate', [UserController::class, "viewcreate"])->name('viewcreate');
-Route::get('/vieworder', [UserController::class, "vieworder"])->name('vieworder');
+
+Route::get('/vieworder', [OrderController::class, "vieworder"])->name('vieworder');
+Route::post('/order', [OrderController::class, "order"])->name('order');

@@ -1,25 +1,18 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<x-head />
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Demo</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="{{ asset('css/index.css') }}" />
+</head>
 
 <body>
     <x-header />
     <main>
-        @if(!Auth::user())
-        <button><a style="text-decoration: none; color:black" href="{{ route('viewreg') }}">Зарегистрироваться</a></button>
-        <button><a style="text-decoration: none; color:black" href="{{ route('viewlog') }}">Войти</a></button>
-        @endif
-        @auth
-        @if(Auth::user()->role == 'admin')
-        <button><a style="text-decoration: none; color:black" href="{{ route('viewadminpanel') }}">Панель админа</a></button>
-        <button><a style="text-decoration: none; color:black" href="{{ route('viewcreate') }}">Создать</a></button>
-        @else
-        <button><a style="text-decoration: none; color:black" href="{{ route('viewprofile') }}">Профиль</a></button>
-        <button><a style="text-decoration: none; color:black" href="{{ route('vieworder') }}">Заказать</a></button>
-        @endif
-        <button><a style="text-decoration: none; color:black" style="text-decoration: none;" href="{{ route('logout') }}">Выйти</a></button>
-        @endauth
+        
     </main>
     <x-footer />
 </body>
