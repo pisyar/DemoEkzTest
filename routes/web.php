@@ -18,4 +18,5 @@ Route::get('/viewadminpanel', [UserController::class, "viewadminpanel"])->name('
 Route::get('/viewcreate', [UserController::class, "viewcreate"])->name('viewcreate');
 
 Route::get('/vieworder', [OrderController::class, "vieworder"])->name('vieworder');
-Route::post('/order', [OrderController::class, "order"])->name('order');
+Route::get('/order', [OrderController::class, "order"])->name('order');
+Route::post('/orderform', [OrderController::class, "orderform"])->name('orderform');

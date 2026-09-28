@@ -15,22 +15,28 @@
         <label>
             <H2>Заказать помещение</H2>
         </label>
-        <form action="{{ Route('order') }}" method="post" enctype="multipart/form-data">
+        <form action="{{ Route('orderform') }}" method="post" enctype="multipart/form-data">
             @csrf
             <div class="seredina">
                 <div>
                     <label for="exampleInputPassword1" class="form-label">Название места</label>
                     <input type="text" value="{{ old('name') }}" name="name" class="form-control" id="exampleInputPassword1" placeholder="Помещение">
+                    @error('name')
+                    <div class="alert">{{ $message }}</div>
+                    @enderror
                 </div>
                 <div class="form-label">
                     <label>Дата и время доставки</label>
                     <input type="datetime-local" value="{{ old('date') }}" name="date">
+                    @error('date')
+                    <div class="alert">{{ $message }}</div>
+                    @enderror
                 </div>
                 <div class="form-label">
                     <label>Способ оплаты</label>
-                    <select name="oplata">
-                        <option value="nal">СБП</option>
-                        <option value="perevod">Очно</option>
+                    <select name="payment">
+                        <option value="SBP">СБП</option>
+                        <option value="Ochno">Очно</option>
                     </select>
                 </div>
                 <button type="submit" class="btn btn-primary">Сделать заказ</button>

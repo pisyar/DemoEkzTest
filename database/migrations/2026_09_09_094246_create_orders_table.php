@@ -16,8 +16,8 @@ return new class extends Migration
             $table->foreignId('user_id')->constrained()->cascadeOnUpdate()->cascadeOnDelete();
             $table->string('name');
             $table->date('date');
-            $table->enum('payment', ['СБП', 'Очно']);
-            $table->enum('status', ['Новая', 'Назначено', 'Завершено'])->default('Новая');
+            $table->enum('payment', ['SBP', 'Ochno'])->default('SBP');
+            $table->enum('status', ['New', 'Naznach', 'End'])->default('New');
             $table->timestamps();
         });
     }

@@ -26,8 +26,6 @@
                     <label for="exampleInputPassword1" class="form-label">Описание</label>
                     <input type="text" value="{{ old('name') }}" name="name" class="form-control" id="exampleInputPassword1" placeholder="Помещение">
                 </div>
-
-                
             </div>
         </form>
     </main>
