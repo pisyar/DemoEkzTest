@@ -15,7 +15,7 @@
         <label>
             <H2>Заказать помещение</H2>
         </label>
-        <form action="{{ Route('orderform') }}" method="post" enctype="multipart/form-data">
+        <form action="{{ Route('orderform') }}" method="post">
             @csrf
             <div class="seredina">
                 <div>

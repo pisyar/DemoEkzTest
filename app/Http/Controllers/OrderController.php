@@ -11,7 +11,7 @@ use Illuminate\Support\Facades\Auth;
 class OrderController extends Controller
 {
 
-    public function order(OrderRequest $request){
+    public function order(){
         $orders = Order::where("user_id", Auth::id())->get();
         $comments = Comment::all();
         return view('profile', compact('orders', 'comments'));
@@ -24,7 +24,8 @@ class OrderController extends Controller
         $order->date = $request->date;
         $order->payment = $request->payment;
         $order->save();
-        return redirect()->route('order');
+        $orders = Order::where("user_id", Auth::user()->id)->get();
+        return view('profile', compact('orders'));
 
     }
 
